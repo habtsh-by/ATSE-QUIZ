@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ATSE QUIZ</title>
+  <link rel="manifest" href="manifest.json">
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('flutter_service_worker.js?v={{flutter_service_worker_version}}');
+    }
+  </script>
+  <script src="main.dart.js" defer></script>
+</head>
+<body>
+<script>
+  FlutterLoader.load({
+    entrypointUrl: "main.dart.js",
+  }).then(function(engineInitializer) {
+    return engineInitializer.initializeEngine();
+  }).then(function(appRunner) {
+    return appRunner.runApp();
+  });
+</script>
+</body>
+</html>
